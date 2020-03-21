@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- font-family: 'Playfair Display', serif; -->
+    <!-- font-family: 'Lato', sans-serif; -->
+
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/1685df272a.js"></script>
+
+    <title>Event List</title>
+</head>
+
+<body>
+
+    <!-- header -->
+    <div id="header" class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="index.html"><img src="images/Inspect-2.png" alt="logo"></a>
+                <div class="get_started">
+                    <span><a href="user_profile.html"><img class="userProfile mr-2" src="images/editor-3.jpg"
+                                alt=""></a></span>
+                    <span><button type="button" class="btn btn-outline-dark logoutlink"><a class="" href="#">Log
+                                out</a></button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- navigation bar -->
+    <div id="navbar" class="container mt-2">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="scrollmenu">
+                    <a href="index.html" class="active">HOME</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="events.html">EVENTS</a>
+                    <a href="get-hired.html">GET HIRED</a>
+                    <a href="river.html">RIVER</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- sign in -->
+    <div id="myModal_in" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="close_modal">
+                <span id="colseIt" class="close close_in"><i class="fas fa-times float-right"></i></span>
+            </div>
+            <div class="intro_signup text-center">
+                <h1 style="color: white">Join Inspect</h1>
+
+                <p style="color: white">
+                    Share your ideas, Read blogs, Follow what other companies <br> are are offering
+                    and generate value for your own work place. <br> A wonderful place to gather knowledge.
+                </p>
+            </div>
+            <form class="sign_up text-center">
+                <div class="form-group">
+                    <input type="email" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn">Sign in</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container section_space news_state">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Tech Events</h2>
+                <span><a href="createEvent.html"><button type="button" class="btn btn-outline-dark float-right">Create
+                            Event</button></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 allEvents">
+                <div class="eachEvent mt-3">
+                    <div class="date"><strong>Date</strong></div>
+                    <div class="company ml-5"><strong>Company</strong></div>
+                    <div class="place"><strong>Location</strong></div>
+                </div>
+                <div class="eachEvent mt-3" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 6-9</a></div>
+                    <div class="company"><a href="#">Selice</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 10-13</a></div>
+                    <div class="company"><a href="#">Daily Star</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 12-15</a></div>
+                    <div class="company"><a href="#">Therap</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 16-19</a></div>
+                    <div class="company"><a href="#">Tiger IT</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 17-19</a></div>
+                    <div class="company"><a href="#">Leads Corporation</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 18-21</a></div>
+                    <div class="company"><a href="#">IDLC Finance</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 22-24</a></div>
+                    <div class="company"><a href="#">Axion</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 25-27</a></div>
+                    <div class="company"><a href="#">Webable</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Oct 1-4</a></div>
+                    <div class="company"><a href="#">NewsCred</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Oct 2-5</a></div>
+                    <div class="company"><a href="#">Illusion</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Oct 4-9</a></div>
+                    <div class="company"><a href="#">Dreamerz Lab</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Oct 6-7</a></div>
+                    <div class="company"><a href="#">AppIcon</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="particles-js" class="section_space text-center">
+        <div class="Contact_info">
+            <h1>Inspect</h1>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/controlModal.js"></script>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
