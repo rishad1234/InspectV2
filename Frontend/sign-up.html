@@ -44,30 +44,23 @@
 
     <div class="container section_space signup-bg">
         <div class="row">
-            <div class="col-md-6 signuppage">
-                <h1 style="font-family: 'Playfair Display', serif; color: white" class="text-center mt-5">
-                    <strong>JOIN INSPECT</strong>
-                </h1>
-                <p style="color: white; font-family: 'Lato', sans-serif;" class="text-center mt-4">
-                    Share your ideas, Read blogs, Follow what other companies <br> are are offering
-                    and generate value for your own work place. <br> A wonderful place to gather knowledge.
-                </p>
+            <div class="col-md-6 main_signin_form">
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="companyName" placeholder="Enter Company Name">
+                        <input type="text" class="form-control" id="company_name" aria-describedby="companyName"
+                            placeholder="Enter Copany Name">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        <input type="email" class="form-control" id="email_signup" aria-describedby="emailHelp"
                             placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                        <input type="password" class="form-control" id="pass_signup" placeholder="Password">
                     </div>
-                    <button type="submit" class="btn">Register</button><span><a class="cool-link" href="#">Have an
-                            acount? Sign in</a></span>
+                    <button type="submit" class="btn btn-outline-dark">Signup</button>
                 </form>
             </div>
-            <div class="col-md-6 signup-right">
+            <div class="col-md-6 signup-right d-none d-md-block">
                 <h2>
                     By Signing Up, Get Access To
 
@@ -145,6 +138,9 @@
 
     <script>
         $(".signuppage").css("height", $(window).height() - $("#header").height() - 100);
+        if($(window).width() < 768){
+            $(".main_signin_form").css("height",$(window).height()-$("#header").height());
+        }
     </script>
 </body>
 

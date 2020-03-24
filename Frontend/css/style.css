@@ -1,6 +1,6 @@
 /* general */
 *:focus {
-  outline: none;
+  outline: none !important;
 }
 .section_space {
   margin-top: 40px;
@@ -746,5 +746,36 @@ video {
     margin-top:40px;
     margin-bottom: 40px;
     font-size:28px !important;
+  }
+}
+
+/* main signin */
+.main_signin_form{
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_signin_form form{
+  width: 50% !important;
+}
+.main_signin_form input{
+  border: 1px solid black !important;
+}
+.main_signin_form .btn{
+  font-size: 14px;
+  width: 100%;
+}
+.f_pass{
+  width: 100%;
+}
+@media(max-width:767px){
+  .main_signin_form{
+    border:none;
+  }
+  .main_signin_form .btn{
+    font-size: 14px;
+    width: 100%;
   }
 }
