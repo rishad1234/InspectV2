@@ -3,69 +3,85 @@
     ViewBag.Title = "Home";
 }
 
-<div id="header" class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <a href="index.html"><img src="~/Content/images/Inspect-2.png" alt="logo"></a>
-            <div class="get_started">
-                <span><a href="user_profile.html"><img class="userProfile mr-2" src="~/Content/images/editor-3.jpg" alt=""></a></span>
-                <!--
-    <span>
-        <button type="button" class="btn btn-outline-dark signlink">
-            <a class="" href="sign-in.html">Sign in</a>
-        </button>
-    </span>
-    <span>
-        <button type="button" class="btn btn-outline-dark signlink">
-            <a class="" href="sign-up.html">Sign up</a>
-        </button>
-    </span>
-    -->
-                @if (Request.IsAuthenticated)
-                {
-                    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+@*<div id="header" class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="index.html"><img src="~/Content/images/Inspect-2.png" alt="logo"></a>
+                <div class="get_started">
+                    <span><a href="user_profile.html"><img class="userProfile mr-2" src="~/Content/images/editor-3.jpg" alt=""></a></span>
+                    <!--
+        <span>
+            <button type="button" class="btn btn-outline-dark signlink">
+                <a class="" href="sign-in.html">Sign in</a>
+            </button>
+        </span>
+        <span>
+            <button type="button" class="btn btn-outline-dark signlink">
+                <a class="" href="sign-up.html">Sign up</a>
+            </button>
+        </span>
+        -->
+                    @if (Request.IsAuthenticated)
                     {
-                        @Html.AntiForgeryToken()
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                                </li>
+                                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                            </ul>
+                            <span>
+                                <button class="btn btn-outline-dark signlink" onclick="location.href='javascript:document.getElementById('logoutForm').submit()'">Logout</button>
+                            </span>
+                        }
+                    }
+                    else
+                    {
+
+                        <span>
+                            <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Register", "Account")'">Register</button>
+                        </span>
+                        <span>
+                            <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Login", "Account")'">Login</button>
+                        </span>
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-                            </li>
-                            @*<li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
-                        </ul>
-                        <span>
-                            <button class="btn btn-outline-dark signlink" onclick="location.href='javascript:document.getElementById('logoutForm').submit()'">Logout</button>
-                        </span>
+                    <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "" })</li>
+                    <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "" })</li>
+                    <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Register", "Account")'">asdfa</button>
+                </ul>
                     }
-                }
-                else
-                {
 
-                    <span>
-                        <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Register", "Account")'">Register</button>
-                    </span>
-                    <span>
-                        <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Login", "Account")'">Login</button>
-                    </span>
-
-                    @*<ul class="nav navbar-nav navbar-right">
-                <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "" })</li>
-                <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "" })</li>
-                <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Register", "Account")'">asdfa</button>
-            </ul>*@
-                }
-
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <!-- navigation bar -->
+    <div id="navbar" class="container mt-2">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="scrollmenu">
+                    <a href="index.html" class="active">HOME</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="events.html">EVENTS</a>
+                    <a href="get-hired.html">GET HIRED</a>
+                    <a href="river.html">RIVER</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </div>*@
 
 <!-- navigation bar -->
 <div id="navbar" class="container mt-2">
     <div class="row">
         <div class="col-sm-12">
             <div class="scrollmenu">
-                <a href="index.html" class="active">HOME</a>
+                <a href='@Url.Action("Index", "Home")' class="active">HOME</a>
                 <a href="about.html">ABOUT</a>
                 <a href="events.html">EVENTS</a>
                 <a href="get-hired.html">GET HIRED</a>
