@@ -60,19 +60,25 @@
                 <a href='@Url.Action("Index", "Home")'><img src="~/Content/images/Inspect-2.png" alt="logo"></a>
                 <div class="get_started">
                     @*<span><a href='@Url.Action("Register", "Account")'><img class="userProfile mr-2" src="~/Content/images/editor-3.jpg" alt=""></a></span>*@
-                   
+
                     @if (Request.IsAuthenticated)
                     {
                         using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                         {
                             @Html.AntiForgeryToken()
 
+                            <!--
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
                                     @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
                                 </li>
                                 @*<li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
                             </ul>
+                                -->
+                            <span>
+                                @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "btn" })
+                            </span>
+
                             <span>
                                 <button class="btn btn-outline-dark signlink" onclick="location.href='javascript:document.getElementById('logoutForm').submit()'">Logout</button>
                             </span>
@@ -89,10 +95,10 @@
                         </span>
 
                         @*<ul class="nav navbar-nav navbar-right">
-                                <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "" })</li>
-                                <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "" })</li>
-                                <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Register", "Account")'">asdfa</button>
-                            </ul>*@
+                <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "" })</li>
+                <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "" })</li>
+                <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Register", "Account")'">asdfa</button>
+            </ul>*@
                     }
 
                 </div>
