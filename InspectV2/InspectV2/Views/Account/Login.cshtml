@@ -4,59 +4,143 @@
     ViewBag.Title = "Log in";
 }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
+<div class="container section_space">
+    <div class="row">
+        <div class="col-md-6 main_signin_form">
+
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                 @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
+
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @*@Html.LabelFor(m => m.Email,  new { @class = "col-md-2 control-label" })*@
+                    
+                        @Html.TextBoxFor(m => m.Email, new { placeholder = "Enter Email", @class = "form-control" })
                         @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
+                    
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    @*@Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@
+                    
+                        @Html.PasswordFor(m => m.Password, new { placeholder = "Password", @class = "form-control" })
                         @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                @*<div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <div class="checkbox">
                             @Html.CheckBoxFor(m => m.RememberMe)
                             @Html.LabelFor(m => m.RememberMe)
                         </div>
                     </div>
-                </div>
+                </div>*@
                 <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
-                    </div>
+                    
+                        <input type="submit" value="Log in" class="btn btn-outline-dark" />
+                    
                 </div>
-                <p>
-                    @Html.ActionLink("Register as a new user", "Register")
-                </p>
+                
                 @* Enable this once you have account confirmation enabled for password reset functionality
                     <p>
                         @Html.ActionLink("Forgot your password?", "ForgotPassword")
                     </p>*@
             }
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
+
+        </div>
+
+        <div class="col-md-6 signup-right d-none d-md-block">
+            <h2>
+                By Signing in, Get Access To
+
+            </h2>
+            <div class="card mt-3" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">Create your company's own event.</h5>
+                    <p>
+                        This feature will help you to grow a complete network around the people who are in same
+                        business like you.
+                        let people invite at your event and let them know what your coompany is up to. Share and
+                        gather knowledge together.
+                    </p>
+                </div>
+            </div>
+            <div class="card mt-3" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Get Hired !!</h5>
+                    <p>
+                        Get Job posts from various tonotch local and global companies like NewsCred, Grameenphone
+                        etc.
+                        Match with your requirement and see yourself where you blen in perfectly.
+                    </p>
+                </div>
+            </div>
+            <div class="card mt-3" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Documentaries</h5>
+                    <p>
+                        Let your knowledge grow by watching all the tech and business documentary from the big ceo's
+                        of silicon valley.
+                        Learn what they are up to and how they are impacting the world with revolutionary
+                        technology.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <section id="socialLoginForm">
+                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+        </div>
     </div>
 </div>
+
+
+<div id="particles-js" class="section_space text-center particle_form">
+    <div class="Contact_info">
+        <h1>Inspect</h1>
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+<script src="~/Content/js/particles.js"></script>
+<script src="~/Content/js/app.js"></script>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="~/Content/js/controlModal.js"></script>
+
+<script>
+    $(".signuppage").css("height", $(window).height() - $("#header").height() - 100);
+    if ($(window).width() < 768) {
+        $(".main_signin_form").css("height", $(window).height() - $("#header").height());
+    }
+</script>
+
+
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
