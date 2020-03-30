@@ -32,9 +32,11 @@ body {
 
 /* header */
 #header img {
-  height: 80px;
+  height: 60px;
   display: inline-block;
   float: left;
+  margin-left: 0px !important;
+  padding-left: 0px !important;
 }
 .get_started {
   margin-top: 15px;
@@ -778,4 +780,55 @@ video {
     font-size: 14px;
     width: 100%;
   }
+}
+
+
+/* new sign in form */
+.main_form_container{
+
+}
+.form_container_control{
+  background-image: linear-gradient(rgba(0, 0, 0,0.5), rgba(0, 0, 0,0.5)), url("../images/sign-in-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.btn_sign, .btn_f_pass{
+  width: 100%;
+  border: 1px solid #fff !important;
+  color: white !important;
+  background: transparent;
+}
+.btn_sign:hover, .btn_f_pass:hover{
+  background: white;
+  color: black !important;
+}
+.wrapper_container{
+  margin-left: 7.2rem;
+  margin-right: 7.2rem;
+}
+@media(max-width: 768px){
+  .wrapper_container{
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+  }
+}
+.tall_tile{
+  background: rgba(25, 134, 236, 0.4) !important;
+}
+.title{
+  font-size: 14px !important;
+}
+.box{
+  box-shadow: none !important;
+  /* border: 1px solid black !important; */
+  padding:0.4rem !important;
+  margin:0px !important;
+}
+.is-parent{
+  padding: 0px !important;
 }
