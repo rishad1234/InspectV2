@@ -4,11 +4,11 @@
     ViewBag.Title = "Login";
 }
 
-<div class="container section_space">
+<div class="container main_form_container">
     <div class="row">
-        <div class="col-md-6 main_signin_form">
+        <div class="col-md-6 form_container_control">
 
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
             {
                 @Html.AntiForgeryToken()
 
@@ -37,7 +37,7 @@
                 </div>*@
                 <div class="form-group">
                     
-                        <input type="submit" value="Log in" class="btn btn-outline-dark" />
+                        <input type="submit" value="Log in" class="btn btn_sign" />
                     
                 </div>
                 
@@ -49,7 +49,7 @@
 
         </div>
 
-        <div class="col-md-6 signup-right d-none d-md-block">
+        <div class="col-md-6 info_container_signin d-none d-md-block">
             <h2>
                 By Signing in, Get Access To
 
@@ -92,18 +92,6 @@
                 @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
             </section>
         </div>*@
-    </div>
-</div>
-
-
-<div id="particles-js" class="section_space text-center particle_form">
-    <div class="Contact_info">
-        <h1>Inspect</h1>
-        <ul>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        </ul>
     </div>
 </div>
 
