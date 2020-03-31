@@ -5,7 +5,11 @@
     <meta charset="utf-8" />
     @*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
     <title>@ViewBag.Title | Inspect</title>
-    @Styles.Render("~/Content/css")
+
+    @*do not needed for this project*@
+    @*@Styles.Render("~/Content/css")*@
+    @**@
+
     @Scripts.Render("~/bundles/modernizr")
 
     <!-- Required meta tags -->
@@ -70,17 +74,17 @@
                             <!--
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
-                                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "btn btn-outline-dark signlink" })
                                 </li>
                                 @*<li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
                             </ul>
                                 -->
                             <span>
-                                @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "btn" })
+                                @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "btn btn-outline-dark signlink" })
                             </span>
 
                             <span>
-                                <button class="btn btn-outline-dark signlink" onclick="location.href='javascript:document.getElementById('logoutForm').submit()'">Logout</button>
+                                <button class="btn btn-outline-dark signlink" onclick="location.href='javascript:document.getElementById('logoutForm').submit();'">Logout</button>
                             </span>
                         }
                     }
@@ -91,7 +95,7 @@
                             <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Register", "Account")'">Register</button>
                         </span>
                         <span>
-                            <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Login", "Account")'">Login</button>
+                            <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Login", "Account")'">Log In</button>
                         </span>
 
                         @*<ul class="nav navbar-nav navbar-right">
