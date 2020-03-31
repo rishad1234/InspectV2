@@ -187,18 +187,18 @@ div.scrollmenu a {
 }
 
 /* sponsored post */
-.sponsored_post {
+.sponsored {
   padding: 20px;
   background-color: #f4f4f4;
 }
-.sponsored_post img {
+.sponsored img {
   width: 100px;
 }
-.sponsored_post h5,
-.sponsored_post {
+.sponsored h5,
+.sponsored {
   font-family: "Lato", sans-serif;
 }
-.sponsored_post p {
+.sponsored p {
   font-size: 14px;
   color: #888888;
 }
