@@ -787,6 +787,11 @@ video {
 .main_form_container{
 
 }
+
+.main_form_container .row{
+  height: 100% !important;
+  width: 100% !important;
+}
 .form_container_control{
   background-image: linear-gradient(rgba(0, 0, 0,0.5), rgba(0, 0, 0,0.5)), url("../images/sign-in-bg.jpg");
   background-position: center;
@@ -796,6 +801,7 @@ video {
   justify-content: center;
   align-items: center;
   color: white;
+  margin-top: 30px;
 }
 .btn_sign, .btn_f_pass{
   width: 100%;
@@ -810,6 +816,9 @@ video {
 .wrapper_container{
   margin-left: 7.2rem;
   margin-right: 7.2rem;
+}
+.info_container_signin{
+  margin-top: 30px;
 }
 @media(max-width: 768px){
   .wrapper_container{
