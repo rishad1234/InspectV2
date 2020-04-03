@@ -20,7 +20,8 @@ namespace InspectV2.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<NewsCategory> newsCategories { get; set; }
+        public DbSet<NewsCategory> NewsCategories { get; set; }
+        public DbSet<Sponsor> Sponsors{ get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
