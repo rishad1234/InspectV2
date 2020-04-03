@@ -12,5 +12,6 @@ namespace InspectV2.Models
 
         [Required]
         public string SponsorShip { get; set; }
+
     }
 }

@@ -11,5 +11,7 @@ namespace InspectV2.Models
 
         [Required]
         public string CategoryName { get; set; }
+
+        public ICollection<News> News { get; set; }
     }
 }
