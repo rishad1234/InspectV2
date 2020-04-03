@@ -171,6 +171,10 @@
     <Compile Include="Migrations\202004030831288_InitialMigration.Designer.cs">
       <DependentUpon>202004030831288_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004031401418_PopulateNewsCategories.cs" />
+    <Compile Include="Migrations\202004031401418_PopulateNewsCategories.Designer.cs">
+      <DependentUpon>202004031401418_PopulateNewsCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -302,6 +306,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004030831288_InitialMigration.resx">
       <DependentUpon>202004030831288_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004031401418_PopulateNewsCategories.resx">
+      <DependentUpon>202004031401418_PopulateNewsCategories.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
