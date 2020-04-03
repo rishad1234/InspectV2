@@ -22,6 +22,9 @@ namespace InspectV2.Models
     {
         public DbSet<NewsCategory> NewsCategories { get; set; }
         public DbSet<Sponsor> Sponsors{ get; set; }
+        public DbSet<News> News { get; set; }
+
+        public DbSet<JobPost> Jobs { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

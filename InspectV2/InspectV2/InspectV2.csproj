@@ -191,9 +191,14 @@
     <Compile Include="Migrations\202004031511127_AddNewsTable.Designer.cs">
       <DependentUpon>202004031511127_AddNewsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004031528238_AddJobPostTable.cs" />
+    <Compile Include="Migrations\202004031528238_AddJobPostTable.Designer.cs">
+      <DependentUpon>202004031528238_AddJobPostTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\JobPost.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\News.cs" />
     <Compile Include="Models\NewsCategory.cs" />
@@ -339,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004031511127_AddNewsTable.resx">
       <DependentUpon>202004031511127_AddNewsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004031528238_AddJobPostTable.resx">
+      <DependentUpon>202004031528238_AddJobPostTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
