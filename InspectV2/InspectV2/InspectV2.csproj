@@ -195,8 +195,13 @@
     <Compile Include="Migrations\202004031528238_AddJobPostTable.Designer.cs">
       <DependentUpon>202004031528238_AddJobPostTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004052238477_AddEventTable.cs" />
+    <Compile Include="Migrations\202004052238477_AddEventTable.Designer.cs">
+      <DependentUpon>202004052238477_AddEventTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\JobPost.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -347,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004031528238_AddJobPostTable.resx">
       <DependentUpon>202004031528238_AddJobPostTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004052238477_AddEventTable.resx">
+      <DependentUpon>202004052238477_AddEventTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
