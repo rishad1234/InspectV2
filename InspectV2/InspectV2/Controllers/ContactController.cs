@@ -6,11 +6,12 @@ using System.Web.Mvc;
 
 namespace InspectV2.Controllers
 {
-    public class HomeController : Controller
+    public class ContactController : Controller
     {
+        // GET: Contact
         public ActionResult Index()
         {
-            return View();
+            return View("Contact");
         }
     }
 }
