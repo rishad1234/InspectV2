@@ -10,16 +10,16 @@ namespace InspectV2.Models
     {
         public int Id { get; set; }
 
-        [StringLength(255)]
+        [StringLength(1000)]
         [Required]
         public string Title { get; set; }
 
         [Required]
-        [StringLength(255)]
+        [StringLength(1000)]
         public string Excerpt { get; set; }
 
         [Required]
-        [StringLength(1000)]
+        [StringLength(5000)]
         public string Body { get; set; }
 
         public string Image { get; set; }
