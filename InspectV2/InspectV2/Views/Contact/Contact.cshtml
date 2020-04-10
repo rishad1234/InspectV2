@@ -1,4 +1,6 @@
-﻿@{
+﻿@using InspectV2.Models
+@model Contact
+@{
     ViewBag.Title = "Contact";
 }
 
@@ -8,23 +10,54 @@
             <h2 class="news_heading">
                 Contact Us
             </h2>
-            <form class="contact-form">
+
+            @using (Html.BeginForm("Create", "Contact", FormMethod.Post, new { @class = "contact-form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
                 <div class="form-group">
-                    <label for="">Enter username</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="">Enter Name</label>
+                    @Html.TextBoxFor(m => m.Username, new { placeholder = "Enter Name", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
                 </div>
+
+
                 <div class="form-group">
                     <label for="">Enter email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    @Html.TextBoxFor(m => m.Email, new { placeholder = "Enter Email", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                 </div>
+
                 <div class="">
                     <label for="">Enter your message</label>
                     <br>
-                    <textarea name="" id=""></textarea>
+                    @Html.TextAreaFor(m => m.Message, new { placeholder = "Enter Message", @class = "" })
+                    @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
                 </div>
 
                 <button type="submit" class="btn btn-outline-dark mt-3 mb-5">Send Mail</button>
-            </form>
+
+            }
+
+
+            @*<form class="contact-form">
+            <div class="form-group">
+                <label for="">Enter username</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="">Enter email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="">
+                <label for="">Enter your message</label>
+                <br>
+                <textarea name="" id=""></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-outline-dark mt-3 mb-5">Send Mail</button>
+        </form>*@
 
 
 

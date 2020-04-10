@@ -27,6 +27,7 @@ namespace InspectV2.Models
         public DbSet<JobPost> Jobs { get; set; }
 
         public DbSet<Event> Events { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
