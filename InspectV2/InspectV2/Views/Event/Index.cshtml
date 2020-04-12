@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<InspectV2.Models.Event>
 @{
     ViewBag.Title = "Events";
 }
@@ -11,7 +11,15 @@
                 <div class="company ml-5"><strong>Company</strong></div>
                 <div class="place"><strong>Location</strong></div>
             </div>
-            <div class="eachEvent mt-3" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+            @foreach (var Event in Model)
+            {
+                <div class="eachEvent mt-3" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">@Event.EventDate.ToString("MMM dd, yyy")</a></div>
+                    <div class="company"><a href="#">@Event.Company</a></div>
+                    <div class="place"><a href="#">@Event.Location</a></div>
+                </div>
+            }
+            @*<div class="eachEvent mt-3" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
                 <div class="date"><a href="#">Sep 6-9</a></div>
                 <div class="company"><a href="#">Selice</a></div>
                 <div class="place"><a href="#">Dhaka</a></div>
@@ -70,7 +78,7 @@
                 <div class="date"><a href="#">Oct 6-7</a></div>
                 <div class="company"><a href="#">AppIcon</a></div>
                 <div class="place"><a href="#">Dhaka</a></div>
-            </div>
+            </div>*@
         </div>
     </div>
 </div>
