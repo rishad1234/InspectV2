@@ -164,6 +164,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -216,6 +217,18 @@
     <Compile Include="Migrations\202004101347245_AddContactTable.cs" />
     <Compile Include="Migrations\202004101347245_AddContactTable.Designer.cs">
       <DependentUpon>202004101347245_AddContactTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004121109028_modifiedBodyInEvents.cs" />
+    <Compile Include="Migrations\202004121109028_modifiedBodyInEvents.Designer.cs">
+      <DependentUpon>202004121109028_modifiedBodyInEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004121118096_ModifyEventsTable.cs" />
+    <Compile Include="Migrations\202004121118096_ModifyEventsTable.Designer.cs">
+      <DependentUpon>202004121118096_ModifyEventsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004121119291_SeedEvents.cs" />
+    <Compile Include="Migrations\202004121119291_SeedEvents.Designer.cs">
+      <DependentUpon>202004121119291_SeedEvents.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -341,6 +354,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\About\About.cshtml" />
+    <Content Include="Views\Event\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -386,6 +400,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004101347245_AddContactTable.resx">
       <DependentUpon>202004101347245_AddContactTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004121109028_modifiedBodyInEvents.resx">
+      <DependentUpon>202004121109028_modifiedBodyInEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004121118096_ModifyEventsTable.resx">
+      <DependentUpon>202004121118096_ModifyEventsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004121119291_SeedEvents.resx">
+      <DependentUpon>202004121119291_SeedEvents.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

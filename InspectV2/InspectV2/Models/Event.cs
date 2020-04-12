@@ -9,10 +9,17 @@ namespace InspectV2.Models
     public class Event
     {
         public int Id { get; set; }
+
+        [Required]
+        public string Company { get; set; }
+
+        [Required]
+        public string Location { get; set; }
+
         [Required]
         public string Title { get; set; }
 
-        [StringLength(300)]
+        [StringLength(1500)]
         [Required]
         public string Body { get; set; }
 

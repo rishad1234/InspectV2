@@ -28,6 +28,7 @@ namespace InspectV2.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(Contact contact)
         {
             if (!ModelState.IsValid)
