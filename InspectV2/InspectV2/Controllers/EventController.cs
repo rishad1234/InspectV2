@@ -29,5 +29,26 @@ namespace InspectV2.Controllers
             return View(Events);
         }
 
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public ActionResult Create(Event NewEvent)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Create");
+            }
+            else
+            {
+                Context.Events.Add(NewEvent);
+                Context.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

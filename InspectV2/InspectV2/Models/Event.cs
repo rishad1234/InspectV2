@@ -29,6 +29,9 @@ namespace InspectV2.Models
         [Required]
         public DateTime EventDate { get; set; }
 
+        [Required]
+        public string EventTime { get; set; }
+
         public int SeatCount { get; set; }
     }
 }

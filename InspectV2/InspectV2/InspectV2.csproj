@@ -230,6 +230,10 @@
     <Compile Include="Migrations\202004121119291_SeedEvents.Designer.cs">
       <DependentUpon>202004121119291_SeedEvents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004121833599_AddTimeToEvent.cs" />
+    <Compile Include="Migrations\202004121833599_AddTimeToEvent.Designer.cs">
+      <DependentUpon>202004121833599_AddTimeToEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -355,6 +359,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\About\About.cshtml" />
     <Content Include="Views\Event\Index.cshtml" />
+    <Content Include="Views\Event\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -409,6 +414,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004121119291_SeedEvents.resx">
       <DependentUpon>202004121119291_SeedEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004121833599_AddTimeToEvent.resx">
+      <DependentUpon>202004121833599_AddTimeToEvent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
