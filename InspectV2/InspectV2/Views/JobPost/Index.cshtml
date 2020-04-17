@@ -5,11 +5,6 @@
 }
 
 
-@foreach (var job in Model)
-    {
-        @job.Body
-
-    }
 
 
 <div class="container section_space">
@@ -17,139 +12,42 @@
         <div class="col-md-7">
             <h1 style="display: inline-block; border-bottom:2px solid #1e1d1d">Job Posts</h1>
             <br><br>
-            <div class="card">
-                <div class="card-header">
-                    NewsCred
-                </div>
-                <div class="card-body">
-                    <p class="posiiton">
-                        <strong style="text-decoration: underline"> Position:</strong> Inbound Product Manager
-                    </p>
-                    <p class="deadline">
-                        <strong style="text-decoration: underline"> Application Deadline:</strong> 8th Sep, 2019
-                    </p>
-                    <p class="requirements-header">
-                        <strong style="text-decoration: underline">Requirements:</strong>
-                    </p>
-                    <ul class="requirements">
-                        <li>
-                            Work with designers and engineers to conceptualize and document new features and
-                            products.
-                        </li>
-                        <li>
-                            Organize and lead cross-functional agile software development teams.
-                        </li>
-                        <li>Moderate ideation of new products and features.</li>
-                        <li>Contribute to strategic decisions with the product and executive teams.</li>
-                        <li>
-                            Provide support to NewsCred's sales & marketing teams during new business development,
-                            client support challenges and creation of product marketing collateral.
-                        </li>
-                        <li>
-                            Measure adoption of capabilities across its lifecycle from concept to launch to maturity
-                        </li>
-                        <li>
-                            Give and solicit feedback from other team members with the aim of producing the highest
-                            quality work.
-                        </li>
-                        <li>
-                            Academic background in Engineering, Computer Science, Electrical/Computer Engineering or
-                            a related field (or substantial relevant experience).
-                        </li>
-                        <li>Minimum of 3-5 years in product management.</li>
-                        <li>Proven expertise in Agile software development processes.</li>
-                    </ul>
+            @foreach (var job in Model)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        @job.Company
+                    </div>
+                    <div class="card-body">
+                        <p class="posiiton">
+                            <strong style="text-decoration: underline"> Position:</strong> @job.Position
+                        </p>
+                        <p class="deadline">
+                            <strong style="text-decoration: underline"> Application Deadline:</strong>
+                            @job.Deadline.ToString("ddd MMM, yyy")
+                        </p>
+                        <p class="requirements-header">
+                            <strong style="text-decoration: underline">Requirements:</strong>
+                        </p>
 
-                    <span>
-                        <a href="https://www.newscred.com/careers/?gh_jid=1651744">
-                            <button type="button"
-                                    class="btn btn-outline-dark">
-                                Details
-                            </button>
-                        </a>
-                    </span>
-                </div>
-            </div>
-            <br>
-            <div class="card">
-                <div class="card-header">
-                    bKash
-                </div>
-                <div class="card-body">
-                    <p class="posiiton">
-                        <strong style="text-decoration: underline"> Position:</strong> Quality Assurance, Technology
-                    </p>
-                    <p class="deadline">
-                        <strong style="text-decoration: underline"> Application Deadline:</strong> 24th Sep, 2019
-                    </p>
-                    <p class="requirements-header">
-                        <strong style="text-decoration: underline">Requirements:</strong>
-                    </p>
-                    <ul class="requirements">
-                        <li>
-                            Responsible for the quality assurance of bKash products and systems, include Android/iOS
-                            APP, web APIs, server side applications.
-                        </li>
-                        <li>
-                            Make project test plan, manage project quality risk.
-                        </li>
-                        <li>Participate in testing tools and platform development and maintenance.</li>
-                    </ul>
+                        <div class="requirements">
+                            @Html.Raw(job.Body)
+                        </div>
 
-                    <span>
-                        <a href="https://www.linkedin.com/jobs/view/1506008542/">
-                            <button type="button"
-                                    class="btn btn-outline-dark">
-                                Details
-                            </button>
-                        </a>
-                    </span>
-                </div>
-            </div>
-            <br>
-            <div class="card">
-                <div class="card-header">
-                    Grameenphone Ltd Company Location
-                </div>
-                <div class="card-body">
-                    <p class="posiiton">
-                        <strong style="text-decoration: underline"> Position:</strong> UX/ UI Designer
-                    </p>
-                    <p class="deadline">
-                        <strong style="text-decoration: underline"> Application Deadline:</strong> September 22,
-                        2019
-                    </p>
-                    <p class="requirements-header">
-                        <strong style="text-decoration: underline">Requirements:</strong>
-                    </p>
-                    <ul class="requirements">
-                        <li>
-                            A portfolio that showcases a strong understanding of design, color and typography
-                        </li>
-                        <li>
-                            An ability to translate complex systems, data and ideas related to human-centered design
-                            through visuals, typography, and information graphics
-                        </li>
-                        <li>Comfort sketching to synthesize ideas during research, prototyping, or workshops</li>
-                        <li>
-                            An ability to assimilate feedback at all stages of a project and refine design concepts
-                            to create production-ready artwork for print and digital mediums
-                        </li>
-                        <li>
-                            An ability to work well in teams with members of diverse backgrounds beyond design
-                        </li>
-                    </ul>
+                        
 
-                    <span>
-                        <a href="https://www.linkedin.com/jobs/view/1481746984/">
-                            <button type="button"
-                                    class="btn btn-outline-dark">
-                                Details
-                            </button>
-                        </a>
-                    </span>
+                        <span>
+                            <a href="@job.Link">
+                                <button type="button"
+                                        class="btn btn-outline-dark">
+                                    Details
+                                </button>
+                            </a>
+                        </span>
+                    </div>
                 </div>
-            </div>
+                <br />
+            }
         </div>
 
 
