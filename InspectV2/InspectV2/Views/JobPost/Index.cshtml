@@ -1,9 +1,17 @@
-﻿
+﻿@model IEnumerable<InspectV2.Models.JobPost>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<link rel="stylesheet" href="~/Content/css/style.css">
+
+
+@foreach (var job in Model)
+    {
+        @job.Body
+
+    }
+
+
 <div class="container section_space">
     <div class="row">
         <div class="col-md-7">
@@ -143,76 +151,103 @@
                 </div>
             </div>
         </div>
+
+
         <div class="col-md-5">
-            <h1 style="display: inline-block; border-bottom:2px solid #1e1d1d">Sponsored Post</h1>
-            <br><br>
-            <div class="sponsored_post">
+            <h2 class="news_heading">
+                Sponsored Post
+            </h2>
+            <br />
+            <div class="sponsored">
                 <div class="each_sponsor">
                     <img src="~/Content/images/logo-1.png" alt="">
-                    <br><br>
+                    <br />
                     <a class="sponsor_link_home" href="news_details.html">
-                        <h5>Software Engineering or Site Reliability Engineering Intern, 2020</h5>
+                        <h5>Google Fi - a phone plan, by Google </h5>
                     </a>
-                    <p class="deadline">
-                        <strong style="text-decoration: underline"> Application Deadline:</strong> 1 Oct,
-                        2019
 
+
+                    <p>
+                        We felt that most phone plans just weren't made with you in mind. So that's why we built
+                        Google
+                        Fi with features that real people actually want. Click to learn more. <span>
+                            <a href="news_details.html">
+                                More
+                            </a>
+                        </span>
                     </p>
-                    <span>
-                        <a href="https://careers.google.com/jobs/results/109121100807316166-software-engineering-or-site-reliability-engineering-intern-2020/?category=DATA_CENTER_OPERATIONS&category=DEVELOPER_RELATIONS&category=HARDWARE_ENGINEERING&category=INFORMATION_TECHNOLOGY&category=MANUFACTURING_SUPPLY_CHAIN&category=NETWORK_ENGINEERING&category=PRODUCT_MANAGEMENT&category=PROGRAM_MANAGEMENT&category=SOFTWARE_ENGINEERING&category=TECHNICAL_INFRASTRUCTURE_ENGINEERING&category=TECHNICAL_SOLUTIONS&category=TECHNICAL_WRITING&category=USER_EXPERIENCE&company=Google&company=YouTube&employment_type=INTERN&jex=ENTRY_LEVEL">
-                            <button style="padding:2px 5px" type="button"
-                                    class="btn btn-outline-dark">
-                                Details
-                            </button>
-                        </a>
-                    </span>
                     <hr>
                 </div>
                 <!-- 2nds -->
                 <div class="each_sponsor">
                     <img src="~/Content/images/logo-2.png" alt="">
-                    <br><br>
+                    <br />
                     <a class="sponsor_link_home" href="news_details.html">
-                        <h5>Product development and product management</h5>
+                        <h5>
+                            Adobe's After Effects adds Content-Aware Fill for videos, which can intelligently remove
+                            and
+                            replace objects in a scene
+                        </h5>
                     </a>
-                    <p class="deadline">
-                        <strong style="text-decoration: underline"> Application Deadline:</strong> 17 Oct,
-                        2019
+
+                    <p>
+                        We felt that most phone plans just weren't made with you in mind. So that's why we built
+                        Google
+                        Fi with features that real people actually want. Click to learn more. <span>
+                            <a href="news_details.html">
+                                More
+                            </a>
+                        </span>
                     </p>
-                    <span>
-                        <a href="https://www.adobe.com/careers/engineering.html">
-                            <button style="padding:2px 5px"
-                                    type="button" class="btn btn-outline-dark">
-                                Details
-                            </button>
-                        </a>
-                    </span>
                     <hr>
                 </div>
 
                 <!-- 3rd -->
                 <div class="each_sponsor">
                     <img src="~/Content/images/logo-3.png" alt="">
-                    <br><br>
+                    <br />
                     <a class="sponsor_link_home" href="news_details.html">
-                        <h5>Machine Learning Engineer</h5>
+                        <h5>
+                            How Steve Jobs conceived the “bicycle for the mind” metaphor for the personal computer,
+                            which largely drove Apple's philosophy for decades
+                        </h5>
                     </a>
-                    <p class="deadline">
-                        <strong style="text-decoration: underline"> Application Deadline:</strong> 21 Oct,
-                        2019
+
+
+                    <p>
+                        “When we invented the personal computer, we created a new kind of bicycle...a new man-machine
+                        partnership...a new generation of entrepreneurs." <span>
+                            <a href="news_details.html">
+                                More
+                            </a>
+                        </span>
                     </p>
-                    <span>
-                        <a href="https://jobs.apple.com/en-us/details/200029136/machine-learning-engineer?team=MLAI">
-                            <button style="padding:2px 5px" type="button"
-                                    class="btn btn-outline-dark">
-                                Details
-                            </button>
-                        </a>
-                    </span>
+                    <hr>
+                </div>
+
+                <!-- 4th -->
+                <div class="each_sponsor">
+                    <img src="~/Content/images/logo-4.png" alt="">
+                    <br />
+                    <a class="sponsor_link_home" href="news_details.html">
+                        <h5>Google Fi - a phone plan, by Google </h5>
+                    </a>
+
+                    <p>
+                        We felt that most phone plans just weren't made with you in mind. So that's why we built
+                        Google
+                        Fi with features that real people actually want. Click to learn more. <span>
+                            <a href="news_details.html">
+                                More
+                            </a>
+                        </span>
+                    </p>
                     <hr>
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>
 

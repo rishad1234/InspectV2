@@ -17,11 +17,13 @@ namespace InspectV2.Models
         public DateTime Deadline { get; set; }
 
         [Required]
-        [StringLength(400)]
         public string Body { get; set; }
         [Required]
         public string Link { get; set; }
         [Required]
         public DateTime Created_at { get; set; }
+
+        
+
     }
 }

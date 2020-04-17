@@ -235,6 +235,14 @@
     <Compile Include="Migrations\202004121833599_AddTimeToEvent.Designer.cs">
       <DependentUpon>202004121833599_AddTimeToEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004171852123_AlterBodyInJobPost.cs" />
+    <Compile Include="Migrations\202004171852123_AlterBodyInJobPost.Designer.cs">
+      <DependentUpon>202004171852123_AlterBodyInJobPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004171853032_PopulateJobPostTable.cs" />
+    <Compile Include="Migrations\202004171853032_PopulateJobPostTable.Designer.cs">
+      <DependentUpon>202004171853032_PopulateJobPostTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -419,6 +427,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004121833599_AddTimeToEvent.resx">
       <DependentUpon>202004121833599_AddTimeToEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004171852123_AlterBodyInJobPost.resx">
+      <DependentUpon>202004171852123_AlterBodyInJobPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004171853032_PopulateJobPostTable.resx">
+      <DependentUpon>202004171853032_PopulateJobPostTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InspectV2.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,23 @@ namespace InspectV2.Controllers
 {
     public class JobPostController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public JobPostController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: JobPost
         public ActionResult Index()
         {
-            return View();
+            var jobPost = _context.Jobs.OrderByDescending(x => x.Created_at).ToList();
+            return View(jobPost);
         }
     }
 }
