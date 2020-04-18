@@ -22,6 +22,7 @@ namespace InspectV2.Controllers
         }
 
         // GET: JobPost
+        [Authorize]
         public ActionResult Index()
         {
             var jobPost = _context.Jobs.OrderByDescending(x => x.Created_at).ToList();
