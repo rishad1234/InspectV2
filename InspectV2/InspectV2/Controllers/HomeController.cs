@@ -35,7 +35,9 @@ namespace InspectV2.Controllers
         [Route("Home/newsdetails/{newsId}")]
         public ActionResult NewsDetails(int newsId)
         {
-            return Content("id = "+newsId);
+            var news = _context.News.SingleOrDefault(c => c.Id == newsId);
+
+            return View(news);
         }
     }
 }

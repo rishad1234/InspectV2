@@ -1,4 +1,4 @@
-﻿
+﻿@model InspectV2.Models.News
 @{
     ViewBag.Title = "NewsDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,12 +8,13 @@
     <div class="row">
         <div class="col-sm-7">
             <h1 style="font-family: 'Playfair Display', serif;">
-                Facebook relaunches Oculus for Business, coming this fall, with a new software suite and UX
-                customized for business use cases, adds support for the Oculus Quest.
+                @Model.Title
             </h1>
             <div class="publishDateTime">
                 <span><i class="far fa-calendar-alt"></i></span>
-                <span>13 August, 2019</span>
+                <span>@Model.Created_at.ToString("dd MMM, yyyy, hh:mm:ss")</span>
+                <br />
+                @*<span>@Model.Created_at.ToShortDateString()</span>*@
             </div>
             <div class="share_news_socials">
                 <ul>
@@ -24,49 +25,12 @@
             </div>
             <br><br>
             <div class="news_cover_img">
-                <img src="~/Content/images/news-5.jpg" alt="">
+                <img src="~/Content/images/@Model.Image" alt="">
                 <br>
-                <p class="text-center mt-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                @*<p class="text-center mt-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>*@
             </div>
             <div class="main_news">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus magni odio, esse dolores ea
-                assumenda placeat atque illo nisi quasi in corporis vel odit molestias, porro quae. Dignissimos
-                repellat ad fugit enim neque repudiandae.
-                <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam officia culpa omnis tempore
-                est non aliquam obcaecati deleniti perferendis fugiat fugit deserunt voluptatibus error facilis amet
-                aspernatur assumenda, asperiores mollitia similique, eum, esse laborum totam suscipit. Quidem optio
-                porro, omnis numquam libero, obcaecati a quis voluptatum velit natus exercitationem, deleniti ullam
-                dolorem voluptates! Velit tempora id perferendis exercitationem aspernatur, voluptatem ad voluptate
-                facere vel sint quae minima sequi, debitis praesentium repellat beatae necessitatibus autem
-                laudantium. Ipsum nemo iusto adipisci alias laboriosam quo nulla, totam minima reiciendis illum
-                expedita in labore tempore inventore dolores hic enim sed! Nisi error nesciunt quisquam quos
-                expedita quo vero deserunt dignissimos? Iure, perspiciatis vel commodi doloremque veritatis sequi
-                ipsum, incidunt quos ab eius magni dignissimos! Velit, veniam.
-                <br><br>
-
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto id itaque nostrum ea. Deleniti
-                libero magni asperiores quaerat laudantium, soluta dolores dolorum quisquam. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Nihil eos iste odit quam dolorem provident magnam aliquid,
-                perspiciatis illo consequuntur reprehenderit amet itaque culpa deleniti, harum eaque ad recusandae
-                accusamus repudiandae, et quae modi! Provident eos voluptatum alias cupiditate error sint, modi
-                quibusdam recusandae illum quod quasi aspernatur. Id labore facilis rerum tempore, vero officiis ea
-                rem iusto voluptatibus enim mollitia doloribus optio. Animi quam nisi voluptates eligendi, minus,
-                nulla ex possimus eius ducimus laudantium quae corporis numquam harum esse perspiciatis sequi,
-                dolores accusamus in! Rem hic quidem sit laboriosam, tempore molestias corrupti earum aperiam, iusto
-                consequatur quam fugiat molestiae. Sequi quo et dicta eligendi, non minima ex atque consectetur?
-                Fuga suscipit in aut maxime dolor consectetur, illum quaerat tempore praesentium illo rem laborum
-                culpa nulla sint? Odio maiores officia blanditiis id soluta, nisi ipsa eligendi cumque corporis,
-                dolorem placeat? Nihil adipisci magni est hic numquam necessitatibus expedita. Perspiciatis ipsum
-                reiciendis, aliquid obcaecati cum quo reprehenderit facilis tempore ad modi, veritatis saepe in
-                nihil nostrum accusantium voluptas possimus quos dolor vero voluptatum alias! Maxime possimus nobis
-                molestias nihil ex exercitationem pariatur sit corporis labore voluptatem consequatur, dicta aut
-                commodi dolorum doloremque eos hic obcaecati, voluptate distinctio iusto vero unde aperiam omnis!
-                Nulla eligendi nobis ab voluptatibus suscipit pariatur voluptatem eaque atque accusantium deleniti
-                omnis unde aspernatur reiciendis odit quam voluptates nostrum nam molestiae magni aliquid delectus
-                ipsam, quisquam quos. Harum libero sit dolores repellendus quam excepturi animi sapiente eius esse!
-                <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et saepe commodi necessitatibus.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus id sequi pariatur!
-                <br><br>
+                @Html.Raw(Model.Body)
             </div>
 
             <div class="similar_news">
