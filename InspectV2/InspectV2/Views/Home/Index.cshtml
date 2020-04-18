@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNet.Identity
-@model IEnumerable<InspectV2.Models.NewsCategory>
+@*@model IEnumerable<InspectV2.Models.NewsCategory>*@
+@model InspectV2.ViewModels.IndexHomeViewModel
 
 @{
     ViewBag.Title = "Home";
@@ -19,7 +20,7 @@
             <div class="col-sm-12">
                 <div class="scrollmenu categories-new-version">
 
-                    @foreach (var newsCategory in Model)
+                    @foreach (var newsCategory in Model.NewsCategories)
                     {
                         <a href="each-category.html">@newsCategory.CategoryName</a>
 
@@ -107,39 +108,48 @@
             <h2 class="news_heading">
                 Current News
             </h2>
-            <div class="row news_each mt-4">
-                <div class="col-md-4 news_each_img">
-                    <img src="~/Content/images/news-1.jpg" alt="">
-                    <!-- <p>5:30 PM. 13th August, 2019 </p> -->
+
+
+            @*==========================*@
+
+            @foreach (var news in Model.News)
+            {
+                <div class="row news_each mt-4">
+                    <div class="col-md-4 news_each_img">
+                        <img src="~/Content/images/@news.Image" alt="">
+                        <!-- <p>5:30 PM. 13th August, 2019 </p> -->
+                    </div>
+                    <div class="col-md-8 news_each_heading">
+                        <a href="home/newsdetails/@news.Id">
+                            <p>
+                                @news.Title
+                            </p>
+                        </a>
+
+                    </div>
                 </div>
-                <div class="col-md-8 news_each_heading">
-                    <a href="news_details.html">
+                <div class="row news_each_content">
+                    <div class="col-md-12">
                         <p>
-                            AMD CEO talks about plans to quickly ramp up production of EPYC server chips, launched
-                            this
-                            week, and sustaining the advantage created by Intel's stumbles
+                            @news.Excerpt 
+                            <span>
+                                <a href="news_details.html">
+                                    Read
+                                    More
+                                </a>
+                            </span>
                         </p>
-                    </a>
-
+                        <hr>
+                    </div>
                 </div>
-            </div>
-            <div class="row news_each_content">
-                <div class="col-md-12">
-                    <p>
-                        With Intel struggling to get to the next generation of chipmaking technology, AMD has an
-                        opportunity to gain some ground on its longtime rival. <span>
-                            <a href="news_details.html">
-                                Read
-                                More
-                            </a>
-                        </span>
-                    </p>
-                    <hr>
-                </div>
-            </div>
+
+            }
+
+            @*================================*@
 
 
-            <!-- 2nd news -->
+
+            @*<!-- 2nd news -->
             <div class="row news_each mt-4">
                 <div class="col-md-4 news_each_img">
                     <img src="~/Content/images/news-2.jpg" alt="">
@@ -262,7 +272,7 @@
                     </p>
                     <hr>
                 </div>
-            </div>
+            </div>*@
 
 
         </div>
