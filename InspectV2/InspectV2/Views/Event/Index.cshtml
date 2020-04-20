@@ -3,6 +3,17 @@
     ViewBag.Title = "Events";
 }
 
+<div class="container section_space news_state">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Tech Events</h2>
+            <span>
+                <a href="@Url.Action("Create", "Event")" class="btn btn-outline-dark float-right">Create Event</a>
+            </span>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col-sm-12 allEvents">
@@ -13,72 +24,72 @@
             </div>
             @foreach (var Event in Model)
             {
-                <div class="eachEvent mt-3" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                <div class="eachEvent mt-3" onclick="location.href='Details/@Event.Id'" style="cursor: pointer;">
                     <div class="date"><a href="#">@Event.EventDate.ToString("MMM dd, yyy")</a></div>
                     <div class="company"><a href="#">@Event.Company</a></div>
                     <div class="place"><a href="#">@Event.Location</a></div>
                 </div>
             }
             @*<div class="eachEvent mt-3" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
-                <div class="date"><a href="#">Sep 6-9</a></div>
-                <div class="company"><a href="#">Selice</a></div>
-                <div class="place"><a href="#">Dhaka</a></div>
-            </div>
-            <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
-                <div class="date"><a href="#">Sep 10-13</a></div>
-                <div class="company"><a href="#">Daily Star</a></div>
-                <div class="place"><a href="#">Dhaka</a></div>
-            </div>
-            <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
-                <div class="date"><a href="#">Sep 12-15</a></div>
-                <div class="company"><a href="#">Therap</a></div>
-                <div class="place"><a href="#">Dhaka</a></div>
-            </div>
-            <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
-                <div class="date"><a href="#">Sep 16-19</a></div>
-                <div class="company"><a href="#">Tiger IT</a></div>
-                <div class="place"><a href="#">Dhaka</a></div>
-            </div>
-            <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
-                <div class="date"><a href="#">Sep 17-19</a></div>
-                <div class="company"><a href="#">Leads Corporation</a></div>
-                <div class="place"><a href="#">Dhaka</a></div>
-            </div>
-            <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
-                <div class="date"><a href="#">Sep 18-21</a></div>
-                <div class="company"><a href="#">IDLC Finance</a></div>
-                <div class="place"><a href="#">Dhaka</a></div>
-            </div>
-            <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
-                <div class="date"><a href="#">Sep 22-24</a></div>
-                <div class="company"><a href="#">Axion</a></div>
-                <div class="place"><a href="#">Dhaka</a></div>
-            </div>
-            <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
-                <div class="date"><a href="#">Sep 25-27</a></div>
-                <div class="company"><a href="#">Webable</a></div>
-                <div class="place"><a href="#">Dhaka</a></div>
-            </div>
-            <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
-                <div class="date"><a href="#">Oct 1-4</a></div>
-                <div class="company"><a href="#">NewsCred</a></div>
-                <div class="place"><a href="#">Dhaka</a></div>
-            </div>
-            <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
-                <div class="date"><a href="#">Oct 2-5</a></div>
-                <div class="company"><a href="#">Illusion</a></div>
-                <div class="place"><a href="#">Dhaka</a></div>
-            </div>
-            <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
-                <div class="date"><a href="#">Oct 4-9</a></div>
-                <div class="company"><a href="#">Dreamerz Lab</a></div>
-                <div class="place"><a href="#">Dhaka</a></div>
-            </div>
-            <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
-                <div class="date"><a href="#">Oct 6-7</a></div>
-                <div class="company"><a href="#">AppIcon</a></div>
-                <div class="place"><a href="#">Dhaka</a></div>
-            </div>*@
+                    <div class="date"><a href="#">Sep 6-9</a></div>
+                    <div class="company"><a href="#">Selice</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 10-13</a></div>
+                    <div class="company"><a href="#">Daily Star</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 12-15</a></div>
+                    <div class="company"><a href="#">Therap</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 16-19</a></div>
+                    <div class="company"><a href="#">Tiger IT</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 17-19</a></div>
+                    <div class="company"><a href="#">Leads Corporation</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 18-21</a></div>
+                    <div class="company"><a href="#">IDLC Finance</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 22-24</a></div>
+                    <div class="company"><a href="#">Axion</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Sep 25-27</a></div>
+                    <div class="company"><a href="#">Webable</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Oct 1-4</a></div>
+                    <div class="company"><a href="#">NewsCred</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Oct 2-5</a></div>
+                    <div class="company"><a href="#">Illusion</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Oct 4-9</a></div>
+                    <div class="company"><a href="#">Dreamerz Lab</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>
+                <div class="eachEvent" onclick="location.href='eventDetails.html';" style="cursor: pointer;">
+                    <div class="date"><a href="#">Oct 6-7</a></div>
+                    <div class="company"><a href="#">AppIcon</a></div>
+                    <div class="place"><a href="#">Dhaka</a></div>
+                </div>*@
         </div>
     </div>
 </div>

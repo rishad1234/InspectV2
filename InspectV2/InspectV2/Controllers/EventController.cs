@@ -50,5 +50,11 @@ namespace InspectV2.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        public ActionResult Details(int Id)
+        {
+            Event e = Context.Events.Find(Id);
+            return View("Details", e);
+        }
     }
 }
