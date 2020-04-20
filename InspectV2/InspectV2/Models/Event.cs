@@ -19,7 +19,6 @@ namespace InspectV2.Models
         [Required]
         public string Title { get; set; }
 
-        [StringLength(1500)]
         [Required]
         public string Body { get; set; }
 

@@ -243,6 +243,10 @@
     <Compile Include="Migrations\202004171853032_PopulateJobPostTable.Designer.cs">
       <DependentUpon>202004171853032_PopulateJobPostTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004201121581_AlterBodyEvents.cs" />
+    <Compile Include="Migrations\202004201121581_AlterBodyEvents.Designer.cs">
+      <DependentUpon>202004201121581_AlterBodyEvents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -435,6 +439,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004171853032_PopulateJobPostTable.resx">
       <DependentUpon>202004171853032_PopulateJobPostTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004201121581_AlterBodyEvents.resx">
+      <DependentUpon>202004201121581_AlterBodyEvents.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
