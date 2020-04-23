@@ -4,6 +4,10 @@
 
 @{
     ViewBag.Title = "Home";
+
+
+    var TopNews = Model.News.GetRange(0, 2);
+    var CurrentNews = Model.News.GetRange(2, Model.News.Count - 2);
 }
 
 <div class="container section_space news_state">
@@ -51,9 +55,63 @@
     </div>
 </div>
 
+
+@foreach(var news in TopNews)
+{
+    if(TopNews.IndexOf(news) == 0)
+    {
+
+    }
+}
 <div id="cover_news" class="container section_space">
     <div class="row">
-        <div class="col-sm-6 news_left">
+        @foreach (var news in TopNews)
+        {
+            if (TopNews.IndexOf(news) == 0)
+            {
+                <div class="col-sm-6 news_left">
+                    <a href="news_details.html">
+                        <img src="~/Content/images/@news.Image" alt="">
+                        <br><br>
+                        <h3>
+                            @news.Title
+                        </h3>
+                        <p>@news.Created_at.ToString("ddd MMM, yyy")</p>
+                        <p class="content">
+                            @news.Excerpt<span>
+                                <b>
+                                    <a class="text-primary" href="#">
+                                        Read
+                                        More
+                                    </a>
+                                </b>
+                            </span>
+                        </p>
+                    </a>
+
+                </div>
+
+            }
+            else
+            {
+                <div class="col-sm-6 news_right">
+                    <a href="news_details.html">
+                        <img src="~/Content/images/@news.Image" alt="">
+                        <br><br>
+                        <h3>
+                            @news.Title
+                        </h3>
+                        <p>@news.Created_at.ToString("ddd MMM, yyy")</p>
+                        <p class="content">
+                            @news.Excerpt
+                            <span><b><a class="text-primary" href="#"> Read More</a></b></span>
+                        </p>
+                    </a>
+                </div>
+
+            }
+        }
+        @*<div class="col-sm-6 news_left">
             <a href="news_details.html">
                 <img src="~/Content/images/cover-1.jpg" alt="">
                 <br><br>
@@ -95,7 +153,7 @@
                     <span><b><a class="text-primary" href="#"> Read More</a></b></span>
                 </p>
             </a>
-        </div>
+        </div>*@
     </div>
 </div>
 
@@ -112,7 +170,7 @@
 
             @*==========================*@
 
-            @foreach (var news in Model.News)
+            @foreach (var news in CurrentNews)
             {
                 <div class="row news_each mt-4">
                     <div class="col-md-4 news_each_img">

@@ -24,7 +24,7 @@ namespace InspectV2.Controllers
         public ActionResult Index()
         {
             var NewsCategories = _context.NewsCategories.ToList();
-            var news = _context.News.ToList();
+            var news = _context.News.OrderByDescending(x => x.Created_at).ToList();
 
             var viewModel = new IndexHomeViewModel();
             viewModel.News = news;
