@@ -26,9 +26,11 @@ namespace InspectV2.Controllers
             var NewsCategories = _context.NewsCategories.ToList();
             var news = _context.News.OrderByDescending(x => x.Created_at).ToList();
 
-            var viewModel = new IndexHomeViewModel();
-            viewModel.News = news;
-            viewModel.NewsCategories = NewsCategories;
+            var viewModel = new IndexHomeViewModel
+            {
+                News = news,
+                NewsCategories = NewsCategories
+            };
 
             return View(viewModel);
         }
