@@ -170,7 +170,7 @@
 
             @*==========================*@
 
-            @foreach (var news in CurrentNews)
+            @foreach (var news in Model.News)
             {
                 <div class="row news_each mt-4">
                     <div class="col-md-4 news_each_img">
@@ -191,7 +191,7 @@
                         <p>
                             @news.Excerpt 
                             <span>
-                                <a href="news_details.html">
+                                <a href="home/newsdetails/@news.Id">
                                     Read
                                     More
                                 </a>

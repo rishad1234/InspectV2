@@ -41,5 +41,7 @@ namespace InspectV2.Controllers
 
             return View(news);
         }
+
+        
     }
 }
