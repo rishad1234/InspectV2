@@ -21,22 +21,23 @@ namespace InspectV2.Controllers
         {
             Context.Dispose();
         }
-        
-        //public ActionResult Index()
-        //{
-        //    return RedirectToAction("Index", "Home");
-        //}
-        //public ActionResult CategoryDetails(int id)
-        //{
-        //    var CategoryNews = Context.NewsCategories.Find(id).News.OrderByDescending(x => x.Created_at).ToList();
 
-        //    var ViewModel = new CategoryViewModel
-        //    {
-        //        News = CategoryNews,
+        public ActionResult Index()
+        {
+            return RedirectToAction("Index", "Home");
+        }
+        [Route("category/categorydetails/{categoryId}")]
+        public ActionResult CategoryDetails(int id)
+        {
+            var CategoryNews = Context.NewsCategories.Find(id).News.OrderByDescending(x => x.Created_at).ToList();
 
-        //    };
+            var ViewModel = new CategoryViewModel
+            {
+                News = CategoryNews,
 
-        //    return View("Category", CategoryNews);
-        //}
+            };
+
+            return View("Category", CategoryNews);
+        }
     }
 }

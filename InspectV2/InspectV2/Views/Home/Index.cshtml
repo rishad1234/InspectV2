@@ -70,7 +70,7 @@
             if (TopNews.IndexOf(news) == 0)
             {
                 <div class="col-sm-6 news_left">
-                    <a href="news_details.html">
+                    <a href="newsdetails/@news.Id">
                         <img src="~/Content/images/@news.Image" alt="">
                         <br><br>
                         <h3>
@@ -80,7 +80,7 @@
                         <p class="content">
                             @news.Excerpt<span>
                                 <b>
-                                    <a class="text-primary" href="#">
+                                    <a class="text-primary" href="newsdetails/@news.Id">
                                         Read
                                         More
                                     </a>
@@ -95,7 +95,7 @@
             else
             {
                 <div class="col-sm-6 news_right">
-                    <a href="news_details.html">
+                    <a href="newsdetails/@news.Id">
                         <img src="~/Content/images/@news.Image" alt="">
                         <br><br>
                         <h3>
@@ -104,7 +104,7 @@
                         <p>@news.Created_at.ToString("ddd MMM, yyy")</p>
                         <p class="content">
                             @news.Excerpt
-                            <span><b><a class="text-primary" href="#"> Read More</a></b></span>
+                            <span><b><a class="text-primary" href="newsdetails/@news.Id"> Read More</a></b></span>
                         </p>
                     </a>
                 </div>
@@ -170,7 +170,7 @@
 
             @*==========================*@
 
-            @foreach (var news in Model.News)
+            @foreach (var news in CurrentNews)
             {
                 <div class="row news_each mt-4">
                     <div class="col-md-4 news_each_img">

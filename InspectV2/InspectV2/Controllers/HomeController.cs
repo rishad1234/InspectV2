@@ -34,7 +34,7 @@ namespace InspectV2.Controllers
 
             return View(viewModel);
         }
-        [Route("Home/newsdetails/{newsId}")]
+        [Route("newsdetails/{newsId}")]
         public ActionResult NewsDetails(int newsId)
         {
             var news = _context.News.SingleOrDefault(c => c.Id == newsId);
