@@ -42,6 +42,17 @@ namespace InspectV2.Controllers
             return View(news);
         }
 
-        
+        [Route("river")]
+        public ActionResult River()
+        {
+            var news = _context.News.OrderByDescending(x => x.Created_at).ToList();
+
+            var viewModel = new RiverNewsViewModel
+            {
+                News = news
+            };
+
+            return View(viewModel);
+        }     
     }
 }

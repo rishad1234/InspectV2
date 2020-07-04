@@ -262,6 +262,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\IndexHomeViewModel.cs" />
+    <Compile Include="ViewModels\RiverNewsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -380,6 +381,7 @@
     <Content Include="Views\Home\NewsDetails.cshtml" />
     <Content Include="Views\Event\Details.cshtml" />
     <Content Include="Views\Category\Category.cshtml" />
+    <Content Include="Views\Home\River.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
