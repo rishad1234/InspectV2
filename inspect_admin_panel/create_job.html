@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/1685df272a.js"></script>
+
+    <!-- text editor stuff -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/richtext.min.css">
+    <script src="js/jquery.richtext.min.js"></script>
+
+    <title>Create Job Posts</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- nav starts -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="images/Inspect-2.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="news.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            News
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="news.html">Show all News</a>
+                            <a class="dropdown-item" href="create_news.html">Create News</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="show_all_cat.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Category
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="show_all_cat.html">Show all Categories</a>
+                            <a class="dropdown-item" href="create_cat.html">Create New Category</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="show_all_jobs.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Job Posts
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="show_all_jobs.html">Show all Job Posts</a>
+                            <a class="dropdown-item" href="create_job.html">Create New Job Post</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="show_all_events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- nav ends -->
+    </div>
+
+
+
+    <!-- Create News -->
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Create New Job Post</h3>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="companyName"><b>Enter Company Name</b></label>
+                        <input type="text" class="form-control" id="companyName" placeholder="News Cred, Therap...">
+                    </div>
+                    <div class="form-group">
+                        <label for="positionPost"><b>Enter Position</b></label>
+                        <input type="text" class="form-control" id="positionPost" placeholder="Junior Software Engineer">
+                    </div>
+                    <div class="form-group">
+                        <label for="deadlineForApplication"><b>Enter Deadline</b></label>
+                        <input type="text" class="form-control" id="deadlineForApplication" placeholder="20th August, 2020">
+                    </div>
+                    <div class="form-group">
+                        <label for="companyLink"><b>Enter Company Link</b></label>
+                        <input type="text" class="form-control" id="deadlineForApplication" placeholder="https://www.newscred.com/careers/?gh_jid=1651744">
+                    </div>
+                    <br>
+                    <!-- text editor starts -->
+                    <textarea class="content" name="example"></textarea>
+                    <!-- text editor ends -->
+                    <br><br>
+                    <button type="submit" class="btn btn-dark pr-4 pl-4">Publish Job Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/handle-row.js"></script>
+    <script>
+        let editor_height = 500;
+        $('.content').richText({
+            height: editor_height
+        });
+    </script>
+</body>
+
+</html>
