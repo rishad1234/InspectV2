@@ -259,3 +259,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+InspectV2/InspectV2/App_Data/aspnet-InspectV2-20200330125629.mdf
+InspectV2/InspectV2/App_Data/aspnet-InspectV2-20200330125629_log.ldf
