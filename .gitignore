@@ -261,3 +261,5 @@ __pycache__/
 *.pyc
 InspectV2/InspectV2/App_Data/aspnet-InspectV2-20200330125629.mdf
 InspectV2/InspectV2/App_Data/aspnet-InspectV2-20200330125629_log.ldf
+*.mdf
+*.ldf
