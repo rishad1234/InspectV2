@@ -26,6 +26,7 @@ namespace InspectV2.Controllers
         {
             return RedirectToAction("Index", "Home");
         }
+
         [Route("category/categorydetails/{categoryId}")]
         public ActionResult CategoryDetails(int id)
         {
