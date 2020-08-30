@@ -22,6 +22,7 @@ namespace InspectV2.Controllers
             Context.Dispose();
         }
         // GET: Event
+        [Authorize]
         public ActionResult Index()
         {
             var Events = Context.Events.OrderByDescending(x => x.EventDate).ToList();
