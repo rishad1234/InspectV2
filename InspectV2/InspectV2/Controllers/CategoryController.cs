@@ -27,7 +27,7 @@ namespace InspectV2.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [Route("category/categorydetails/{categoryId}")]
+        //[Route("categorydetails/{categoryId}")]
         public ActionResult CategoryDetails(int id)
         {
             var CategoryNews = Context.NewsCategories.Find(id).News.OrderByDescending(x => x.Created_at).ToList();
