@@ -27,7 +27,6 @@ namespace InspectV2.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        //[Route("categorydetails/{categoryId}")]
         public ActionResult CategoryDetails(int id)
         {
             //this query has bugs
