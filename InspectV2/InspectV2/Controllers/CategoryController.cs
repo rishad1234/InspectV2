@@ -30,6 +30,8 @@ namespace InspectV2.Controllers
         //[Route("categorydetails/{categoryId}")]
         public ActionResult CategoryDetails(int id)
         {
+            //this query has bugs
+            //returning null
             var CategoryNews = Context.NewsCategories.Find(id).News.OrderByDescending(x => x.Created_at).ToList();
 
             var ViewModel = new CategoryViewModel
