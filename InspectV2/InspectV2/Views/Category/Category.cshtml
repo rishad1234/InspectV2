@@ -2,131 +2,15 @@
 @{
     ViewBag.Title = "Category";
 
-
-    var TopNews = Model.News.GetRange(0, 2);
-    var CurrentNews = Model.News.GetRange(2, Model.News.Count - 2);
 }
 
 <div class="container section_space news_state">
     <div class="row">
         <div class="col-sm-12">
-            <h2>Categories</h2>
+            <h2>@Model.CategoryName</h2>
         </div>
     </div>
 </div>
-
-
-
-<div class="container section_space news_state">
-    <div class="row">
-        <div class="col-sm-12">
-            <h2>Top News</h2>
-        </div>
-    </div>
-</div>
-
-
-@foreach (var news in TopNews)
-{
-    if (TopNews.IndexOf(news) == 0)
-    {
-
-    }
-}
-<div id="cover_news" class="container section_space">
-    <div class="row">
-        @foreach (var news in TopNews)
-        {
-            if (TopNews.IndexOf(news) == 0)
-            {
-                <div class="col-sm-6 news_left">
-                    <a href="news_details.html">
-                        <img src="~/Content/images/@news.Image" alt="">
-                        <br><br>
-                        <h3>
-                            @news.Title
-                        </h3>
-                        <p>@news.Created_at.ToString("ddd MMM, yyy")</p>
-                        <p class="content">
-                            @news.Excerpt<span>
-                                <b>
-                                    <a class="text-primary" href="#">
-                                        Read
-                                        More
-                                    </a>
-                                </b>
-                            </span>
-                        </p>
-                    </a>
-
-                </div>
-
-            }
-            else
-            {
-                <div class="col-sm-6 news_right">
-                    <a href="news_details.html">
-                        <img src="~/Content/images/@news.Image" alt="">
-                        <br><br>
-                        <h3>
-                            @news.Title
-                        </h3>
-                        <p>@news.Created_at.ToString("ddd MMM, yyy")</p>
-                        <p class="content">
-                            @news.Excerpt
-                            <span><b><a class="text-primary" href="#"> Read More</a></b></span>
-                        </p>
-                    </a>
-                </div>
-
-            }
-        }
-        @*<div class="col-sm-6 news_left">
-                <a href="news_details.html">
-                    <img src="~/Content/images/cover-1.jpg" alt="">
-                    <br><br>
-                    <h3>
-                        Analysis of 150B+ browser-based US Google searches in Q1 2019: only 41.45% resulted in organic
-                        clicks to non-Google sites, and 48.96% ended without a click
-                    </h3>
-                    <p>13th August, 2019</p>
-                    <p class="content">
-                        In December of 2018, Google’s CEO, Sundar Pichai, was asked a set of questions by the United
-                        States
-                        Congress. His responses left… a lot… to be desired. <span>
-                            <b>
-                                <a class="text-primary" href="#">
-                                    Read
-                                    More
-                                </a>
-                            </b>
-                        </span>
-                    </p>
-                </a>
-
-            </div>
-            <div class="col-sm-6 news_right">
-                <a href="news_details.html">
-                    <img src="~/Content/images/cover-2.jpg" alt="">
-                    <br><br>
-                    <h3>
-                        Python is eating the world: How one developer's side project became the hottest programming
-                        language
-                        on the planet
-                    </h3>
-                    <p>13th August, 2019</p>
-                    <p class="content">
-                        Frustrated by programming language shortcomings, Guido van Rossum created Python. With the
-                        language
-                        now used by millions, Nick Heath talks to van Rossum about Python's past and explores what's
-                        next.
-                        <span><b><a class="text-primary" href="#"> Read More</a></b></span>
-                    </p>
-                </a>
-            </div>*@
-    </div>
-</div>
-
 
 
 <!-- all news -->
@@ -140,7 +24,7 @@
 
             @*==========================*@
 
-            @foreach (var news in CurrentNews)
+            @foreach (var news in Model.News)
             {
                 <div class="row news_each mt-4">
                     <div class="col-md-4 news_each_img">

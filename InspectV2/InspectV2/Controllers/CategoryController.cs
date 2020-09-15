@@ -29,17 +29,17 @@ namespace InspectV2.Controllers
 
         public ActionResult CategoryDetails(int id)
         {
-            //this query has bugs
-            //returning null
-            var CategoryNews = Context.NewsCategories.Find(id).News.OrderByDescending(x => x.Created_at).ToList();
+            var CategoryName = Context.NewsCategories.Find(id).CategoryName.ToString();
+            var CategoryNews = Context.Database.SqlQuery<News>("Select * from News where(NewsCategory_Id = {0}) Order By Created_at DESC", id).ToList();
 
             var ViewModel = new CategoryViewModel
             {
+                CategoryName = CategoryName,
                 News = CategoryNews,
 
             };
 
-            return View("Category", CategoryNews);
+            return View("Category", ViewModel);
         }
     }
 }

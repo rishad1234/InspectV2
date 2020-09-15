@@ -8,6 +8,7 @@ namespace InspectV2.ViewModels
 {
     public class CategoryViewModel
     {
+        public String CategoryName { get; set; }
         public List<News> News { get; set; }
     }
 }
