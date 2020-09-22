@@ -248,6 +248,14 @@
     <Compile Include="Migrations\202004201121581_AlterBodyEvents.Designer.cs">
       <DependentUpon>202004201121581_AlterBodyEvents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009221759299_PopulateNewsTable.cs" />
+    <Compile Include="Migrations\202009221759299_PopulateNewsTable.Designer.cs">
+      <DependentUpon>202009221759299_PopulateNewsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009221841448_NewsTablePopulate.cs" />
+    <Compile Include="Migrations\202009221841448_NewsTablePopulate.Designer.cs">
+      <DependentUpon>202009221841448_NewsTablePopulate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -448,6 +456,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004201121581_AlterBodyEvents.resx">
       <DependentUpon>202004201121581_AlterBodyEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221759299_PopulateNewsTable.resx">
+      <DependentUpon>202009221759299_PopulateNewsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221841448_NewsTablePopulate.resx">
+      <DependentUpon>202009221841448_NewsTablePopulate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
