@@ -1,4 +1,5 @@
 ﻿using InspectV2.Models;
+using InspectV2.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,8 @@ namespace InspectV2.Controllers
         }
         public ActionResult Index()
         {
+            var news = Context.News.OrderByDescending(x => x.Created_at).ToList();
+            ViewData["News"] = news;
             return View("Contact");
         }
 
