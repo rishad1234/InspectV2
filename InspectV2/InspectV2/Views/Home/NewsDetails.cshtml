@@ -3,6 +3,7 @@
     ViewBag.Title = "NewsDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var SponsorCount = 0;
+    var SimilarNews = 0;
 }
 
 <div class="container section_space news_Heading">
@@ -39,41 +40,56 @@
                     Similar News
                 </h3>
                 <br><br>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <img src="~/Content/images/news-2.jpg" alt="">
-                        <br>
-                        <p class="font-weight-bold mt-1">
-                            <a href="news_details.html">
-                                DeepMind execs talk about the importance of interdisciplinary research and how AI
-                                could
-                                help
-                                solve tough scientific problems, like predicting shapes of proteins
-                            </a>
-                        </p>
+                    <div class="row">
+                        @foreach (var news in Model.NewsList)
+                        {
+                            if (news.NewsCategory.Id == Model.News.NewsCategory.Id && SimilarNews != 3 && news.Id != Model.News.Id)
+                            {
+                                <div class="col-sm-4">
+                                    <img src="~/Content/images/@news.Image" alt="">
+                                    <br>
+                                    <p class="font-weight-bold mt-1">
+                                        <a href="newsdetails/@news.Id">
+                                            @news.Title
+                                        </a>
+                                    </p>
+                                </div>
+                            }
+                        }
+                        @*<div class="col-sm-4">
+                            <img src="~/Content/images/news-2.jpg" alt="">
+                            <br>
+                            <p class="font-weight-bold mt-1">
+                                <a href="news_details.html">
+                                    DeepMind execs talk about the importance of interdisciplinary research and how AI
+                                    could
+                                    help
+                                    solve tough scientific problems, like predicting shapes of proteins
+                                </a>
+                            </p>
+                        </div>*@
+                        @*<div class="col-sm-4">
+                            <img src="~/Content/images/news-1.jpg" alt="">
+                            <br>
+                            <p class="font-weight-bold mt-1">
+                                <a href="news_details.html">
+                                    Source: the FTC's antitrust investigation into Facebook will focus on the company's
+                                    core
+                                    social networking business
+                                </a>
+                            </p>
+                        </div>*@
+                        @*<div class="col-sm-4">
+                            <img src="~/Content/images/news-3.jpg" alt="">
+                            <br>
+                            <p class="font-weight-bold mt-1">
+                                <a href="news_details.html">
+                                    Synergy Research: enterprise SaaS revenue will hit $100B annual run rate in Q2, with
+                                    Microsoft, Salesforce, and Adobe accounting for nearly 40% of the market
+                                </a>
+                            </p>
+                        </div>*@
                     </div>
-                    <div class="col-sm-4">
-                        <img src="~/Content/images/news-1.jpg" alt="">
-                        <br>
-                        <p class="font-weight-bold mt-1">
-                            <a href="news_details.html">
-                                Source: the FTC's antitrust investigation into Facebook will focus on the company's
-                                core
-                                social networking business
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="~/Content/images/news-3.jpg" alt="">
-                        <br>
-                        <p class="font-weight-bold mt-1">
-                            <a href="news_details.html">
-                                Synergy Research: enterprise SaaS revenue will hit $100B annual run rate in Q2, with
-                                Microsoft, Salesforce, and Adobe accounting for nearly 40% of the market
-                            </a>
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
 
