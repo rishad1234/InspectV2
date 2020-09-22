@@ -32,7 +32,7 @@
     <!-- font-family: 'Lato', sans-serif; -->
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/1685df272a.js"></script>
-
+    
 </head>
 <body>
     @*---------------custom nav bar and logo-------------------*@
@@ -58,6 +58,7 @@
                                 @*<li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
                             </ul>
                                 -->
+                            
                             <span>
                                 @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "btn btn-outline-dark signlink" })
                             </span>
@@ -69,7 +70,7 @@
                     }
                     else
                     {
-
+                        
                         <span>
                             <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Register", "Account")'">Register</button>
                         </span>
@@ -77,11 +78,7 @@
                             <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Login", "Account")'">Log In</button>
                         </span>
 
-                        @*<ul class="nav navbar-nav navbar-right">
-                                <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "" })</li>
-                                <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "" })</li>
-                                <button class="btn btn-outline-dark signlink" onclick="location.href='@Url.Action("Register", "Account")'">asdfa</button>
-                            </ul>*@
+                        
                     }
 
                 </div>

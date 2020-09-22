@@ -54,13 +54,17 @@ body {
   color: black;
   text-decoration: none;
 }
+.get_started a:hover {
+    color: white !important;    
+}
 @media (max-width: 576px) {
   #header img {
     height: 60px;
   }
   .get_started {
-    margin-top: 10px;
-  }
+      margin-top: 10px;
+      float: left;
+   }
 }
 
 /* navigation */
@@ -433,6 +437,7 @@ div.scrollmenu a {
   .news_cover_img img {
     width: 100%;
     height: 300px;
+    object-fit:cover !important;
   }
 }
 .main_news{
@@ -560,10 +565,17 @@ div.scrollmenu a {
 .each-date-section a:hover {
   color: #888;
 }
-
+.eachRiver a:link, .eachRiver  a:visited{
+    text-decoration: none;
+    color: black;
+}
+.eachRiver a:hover {
+    color: #004d6f;
+    text-decoration: none;
+}
 /* documentaries */
 .doc_cards {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 .doc_cards img {
   height: 200px;
@@ -836,3 +848,4 @@ video {
 .is-parent{
   padding: 0px !important;
 }
+

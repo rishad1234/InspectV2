@@ -11,23 +11,21 @@ var span = document.getElementById("close_sign_up");
 var span_in = document.getElementById("colseIt");
 
 // When the user clicks the button, open the modal 
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-btn_sign_in.onclick = function () {
-    modal_in.style.display = "block";
-}
+
+//btn_sign_in.onclick = function () {
+//    modal_in.style.display = "block";
+//}
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-}
-span_in.onclick = function () {
-    modal_in.style.display = "none";
+//span.onclick = function () {
+//    modal.style.display = "none";
+//}
+//span_in.onclick = function () {
+//    modal_in.style.display = "none";
     
-}
-console.log(span);
-console.log(span_in);
+//}
+//console.log(span);
+//console.log(span_in);
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
