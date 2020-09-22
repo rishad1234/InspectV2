@@ -270,6 +270,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\IndexHomeViewModel.cs" />
+    <Compile Include="ViewModels\NewsDetailsVIewModel.cs" />
     <Compile Include="ViewModels\RiverNewsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

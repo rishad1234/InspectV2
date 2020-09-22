@@ -38,8 +38,14 @@ namespace InspectV2.Controllers
         public ActionResult NewsDetails(int newsId)
         {
             var news = _context.News.SingleOrDefault(c => c.Id == newsId);
+            var NewsList = _context.News.OrderByDescending(x => x.Created_at).ToList();
 
-            return View(news);
+            var viewModel = new NewsDetailsVIewModel
+            {
+                News = news,
+                NewsList = NewsList
+            };
+            return View(viewModel);
         }
 
         [Route("river")]
