@@ -62,16 +62,16 @@
                     <a href="newsdetails/@news.Id">
                         <img src="~/Content/images/@news.Image" alt="">
                         <br><br>
-                        <h3>
+                        <h3 style="font-family: 'Roboto Slab', serif">
                             @news.Title
                         </h3>
-                        <p>@news.Created_at.ToString("ddd MMM, yyy")</p>
+                        <p style="font-family: 'Roboto Slab', serif; font-weight:200; color: #645959;">@news.Created_at.ToString("ddd MMM, yyy")</p>
                         <p class="content">
                             @news.Excerpt<span>
                                 <b>
                                     <a class="text-primary" href="newsdetails/@news.Id">
-                                        Read
-                                        More
+                                        read
+                                        more
                                     </a>
                                 </b>
                             </span>
@@ -87,13 +87,13 @@
                     <a href="newsdetails/@news.Id">
                         <img src="~/Content/images/@news.Image" alt="">
                         <br><br>
-                        <h3>
+                        <h3 style="font-family: 'Roboto Slab', serif">
                             @news.Title
                         </h3>
-                        <p>@news.Created_at.ToString("ddd MMM, yyy")</p>
+                        <p style="font-family: 'Roboto Slab', serif; font-weight:200; color: #645959;">@news.Created_at.ToString("ddd MMM, yyy")</p>
                         <p class="content">
                             @news.Excerpt
-                            <span><b><a class="text-primary" href="newsdetails/@news.Id"> Read More</a></b></span>
+                            <span><b><a class="text-primary" href="newsdetails/@news.Id"> read more</a></b></span>
                         </p>
                     </a>
                 </div>
@@ -125,7 +125,7 @@
                     </div>
                     <div class="col-md-8 news_each_heading">
                         <a href="newsdetails/@news.Id">
-                            <p>
+                            <p style="font-family: 'Roboto Slab', serif">
                                 @news.Title
                             </p>
                         </a>
@@ -137,9 +137,9 @@
                         <p>
                             @news.Excerpt
                             <span>
-                                <a href="newsdetails/@news.Id">
-                                    Read
-                                    More
+                                <a class="eachNewsLink" href="newsdetails/@news.Id">
+                                    read
+                                    more
                                 </a>
                             </span>
                         </p>
@@ -173,8 +173,8 @@
                                 We felt that most phone plans just weren't made with you in mind. So that's why we built
                                 Google
                                 Fi with features that real people actually want. Click to learn more. <span>
-                                    <a href="newsdetails/@news.Id">
-                                        More
+                                    <a class="eachNewsLink" href="newsdetails/@news.Id">
+                                        more
                                     </a>
                                 </span>
                             </p>
@@ -183,91 +183,6 @@
                         SponsorCount++;
                     }
                 }
-                @*<div class="each_sponsor">
-                        <img src="~/Content/images/logo-1.png" alt="">
-                        <br />
-                        <a class="sponsor_link_home" href="news_details.html">
-                            <h5>Google Fi - a phone plan, by Google </h5>
-                        </a>
-
-
-                        <p>
-                            We felt that most phone plans just weren't made with you in mind. So that's why we built
-                            Google
-                            Fi with features that real people actually want. Click to learn more. <span>
-                                <a href="news_details.html">
-                                    More
-                                </a>
-                            </span>
-                        </p>
-                        <hr>
-                    </div>*@
-                <!-- 2nds -->
-                @*<div class="each_sponsor">
-                        <img src="~/Content/images/logo-2.png" alt="">
-                        <br />
-                        <a class="sponsor_link_home" href="news_details.html">
-                            <h5>
-                                Adobe's After Effects adds Content-Aware Fill for videos, which can intelligently remove
-                                and
-                                replace objects in a scene
-                            </h5>
-                        </a>
-
-                        <p>
-                            We felt that most phone plans just weren't made with you in mind. So that's why we built
-                            Google
-                            Fi with features that real people actually want. Click to learn more. <span>
-                                <a href="news_details.html">
-                                    More
-                                </a>
-                            </span>
-                        </p>
-                        <hr>
-                    </div>*@
-
-                <!-- 3rd -->
-                @*<div class="each_sponsor">
-                        <img src="~/Content/images/logo-3.png" alt="">
-                        <br />
-                        <a class="sponsor_link_home" href="news_details.html">
-                            <h5>
-                                How Steve Jobs conceived the “bicycle for the mind” metaphor for the personal computer,
-                                which largely drove Apple's philosophy for decades
-                            </h5>
-                        </a>
-
-
-                        <p>
-                            “When we invented the personal computer, we created a new kind of bicycle...a new man-machine
-                            partnership...a new generation of entrepreneurs." <span>
-                                <a href="news_details.html">
-                                    More
-                                </a>
-                            </span>
-                        </p>
-                        <hr>
-                    </div>*@
-
-                <!-- 4th -->
-                @*<div class="each_sponsor">
-                        <img src="~/Content/images/logo-4.png" alt="">
-                        <br />
-                        <a class="sponsor_link_home" href="news_details.html">
-                            <h5>Google Fi - a phone plan, by Google </h5>
-                        </a>
-
-                        <p>
-                            We felt that most phone plans just weren't made with you in mind. So that's why we built
-                            Google
-                            Fi with features that real people actually want. Click to learn more. <span>
-                                <a href="news_details.html">
-                                    More
-                                </a>
-                            </span>
-                        </p>
-                        <hr>
-                    </div>*@
             </div>
         </div>
     </div>

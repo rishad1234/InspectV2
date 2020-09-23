@@ -9,14 +9,13 @@
 <div class="container section_space news_Heading">
     <div class="row">
         <div class="col-sm-7">
-            <h1 style="font-family: 'Playfair Display', serif;">
+            <h1 style="font-family: 'Roboto Slab', serif;">
                 @Model.News.Title
             </h1>
             <div class="publishDateTime">
                 <span><i class="far fa-calendar-alt"></i></span>
                 <span>@Model.News.Created_at.ToString("dd MMM, yyyy, hh:mm:ss")</span>
                 <br />
-                @*<span>@Model.Created_at.ToShortDateString()</span>*@
             </div>
             <div class="share_news_socials">
                 <ul>
@@ -29,7 +28,6 @@
             <div class="news_cover_img">
                 <img src="~/Content/images/@Model.News.Image" alt="">
                 <br>
-                @*<p class="text-center mt-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>*@
             </div>
             <div class="main_news mt-4">
                 @Html.Raw(Model.News.Body)
@@ -48,7 +46,7 @@
                             <div class="col-sm-4">
                                 <img src="~/Content/images/@news.Image" alt="">
                                 <br>
-                                <p class="font-weight-bold mt-1">
+                                <p class="mt-1">
                                     <a href="newsdetails/@news.Id">
                                         @news.Title
                                     </a>
@@ -56,39 +54,6 @@
                             </div>
                         }
                     }
-                    @*<div class="col-sm-4">
-                            <img src="~/Content/images/news-2.jpg" alt="">
-                            <br>
-                            <p class="font-weight-bold mt-1">
-                                <a href="news_details.html">
-                                    DeepMind execs talk about the importance of interdisciplinary research and how AI
-                                    could
-                                    help
-                                    solve tough scientific problems, like predicting shapes of proteins
-                                </a>
-                            </p>
-                        </div>*@
-                    @*<div class="col-sm-4">
-                            <img src="~/Content/images/news-1.jpg" alt="">
-                            <br>
-                            <p class="font-weight-bold mt-1">
-                                <a href="news_details.html">
-                                    Source: the FTC's antitrust investigation into Facebook will focus on the company's
-                                    core
-                                    social networking business
-                                </a>
-                            </p>
-                        </div>*@
-                    @*<div class="col-sm-4">
-                            <img src="~/Content/images/news-3.jpg" alt="">
-                            <br>
-                            <p class="font-weight-bold mt-1">
-                                <a href="news_details.html">
-                                    Synergy Research: enterprise SaaS revenue will hit $100B annual run rate in Q2, with
-                                    Microsoft, Salesforce, and Adobe accounting for nearly 40% of the market
-                                </a>
-                            </p>
-                        </div>*@
                 </div>
             </div>
         </div>
@@ -124,74 +89,6 @@
                     SponsorCount++;
                 }
             }
-            @*<div class="sponsored">
-                <div class="each_sponsor">
-                    <img src="~/Content/images/logo-1.png" alt="">
-                    <br />
-                    <a class="sponsor_link_home" href="news_details.html">
-                        <h5>Google Fi - a phone plan, by Google </h5>
-                    </a>
-
-
-                    <p>
-                        We felt that most phone plans just weren't made with you in mind. So that's why we built
-                        Google
-                        Fi with features that real people actually want. Click to learn more. <span>
-                            <a href="news_details.html">
-                                More
-                            </a>
-                        </span>
-                    </p>
-                    <hr>
-                </div>*@
-            <!-- 2nds -->
-            @*<div class="each_sponsor">
-                    <img src="~/Content/images/logo-2.png" alt="">
-                    <br />
-                    <a class="sponsor_link_home" href="news_details.html">
-                        <h5>
-                            Adobe's After Effects adds Content-Aware Fill for videos, which can intelligently remove
-                            and
-                            replace objects in a scene
-                        </h5>
-                    </a>
-
-                    <p>
-                        We felt that most phone plans just weren't made with you in mind. So that's why we built
-                        Google
-                        Fi with features that real people actually want. Click to learn more. <span>
-                            <a href="news_details.html">
-                                More
-                            </a>
-                        </span>
-                    </p>
-                    <hr>
-                </div>*@
-
-            <!-- 3rd -->
-            @*<div class="each_sponsor">
-                    <img src="~/Content/images/logo-3.png" alt="">
-                    <br />
-                    <a class="sponsor_link_home" href="news_details.html">
-                        <h5>
-                            How Steve Jobs conceived the “bicycle for the mind” metaphor for the personal computer,
-                            which largely drove Apple's philosophy for decades
-                        </h5>
-                    </a>
-
-
-                    <p>
-                        “When we invented the personal computer, we created a new kind of bicycle...a new man-machine
-                        partnership...a new generation of entrepreneurs." <span>
-                            <a href="news_details.html">
-                                More
-                            </a>
-                        </span>
-                    </p>
-                    <hr>
-                </div>*@
-
-            <!-- 4th -->
         </div>
     </div>
 </div>
