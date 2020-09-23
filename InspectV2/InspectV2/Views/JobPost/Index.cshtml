@@ -1,7 +1,8 @@
-﻿@model IEnumerable<InspectV2.Models.JobPost>
+﻿@model InspectV2.ViewModels.JobPostViewModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var SponsorShip = 0;
 }
 
 
@@ -12,7 +13,7 @@
         <div class="col-md-7">
             <h1 style="display: inline-block; border-bottom:2px solid #1e1d1d">Job Posts</h1>
             <br><br>
-            @foreach (var job in Model)
+            @foreach (var job in Model.JobPosts)
             {
                 <div class="card">
                     <div class="card-header">
@@ -34,7 +35,7 @@
                             @Html.Raw(job.Body)
                         </div>
 
-                        
+
 
                         <span>
                             <a href="@job.Link">
@@ -57,7 +58,33 @@
             </h2>
             <br />
             <div class="sponsored">
-                <div class="each_sponsor">
+                @foreach (var news in Model.News)
+                {
+                    if (news.Sponsor.SponsorShip == "True" && SponsorShip < 3)
+                    {
+                        <div class="each_sponsor">
+                            <img src="~/Content/images/@news.Image" alt="">
+                            <br />
+                            <a class="sponsor_link_home" href="/newsDetails/@news.Id">
+                                <h5>@news.Title </h5>
+                            </a>
+
+
+                            <p>
+                                @news.Excerpt <span>
+                                    <a href="/newsDetails/@news.Id">
+                                        More
+                                    </a>
+                                </span>
+                            </p>
+                            <hr>
+                        </div>
+
+                        SponsorShip++;
+                    }
+                }
+
+                @*<div class="each_sponsor">
                     <img src="~/Content/images/logo-1.png" alt="">
                     <br />
                     <a class="sponsor_link_home" href="news_details.html">
@@ -75,9 +102,9 @@
                         </span>
                     </p>
                     <hr>
-                </div>
+                </div>*@
                 <!-- 2nds -->
-                <div class="each_sponsor">
+                @*<div class="each_sponsor">
                     <img src="~/Content/images/logo-2.png" alt="">
                     <br />
                     <a class="sponsor_link_home" href="news_details.html">
@@ -98,10 +125,10 @@
                         </span>
                     </p>
                     <hr>
-                </div>
+                </div>*@
 
                 <!-- 3rd -->
-                <div class="each_sponsor">
+                @*<div class="each_sponsor">
                     <img src="~/Content/images/logo-3.png" alt="">
                     <br />
                     <a class="sponsor_link_home" href="news_details.html">
@@ -121,10 +148,10 @@
                         </span>
                     </p>
                     <hr>
-                </div>
+                </div>*@
 
                 <!-- 4th -->
-                <div class="each_sponsor">
+                @*<div class="each_sponsor">
                     <img src="~/Content/images/logo-4.png" alt="">
                     <br />
                     <a class="sponsor_link_home" href="news_details.html">
@@ -141,7 +168,7 @@
                         </span>
                     </p>
                     <hr>
-                </div>
+                </div>*@
             </div>
         </div>
 

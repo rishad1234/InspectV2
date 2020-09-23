@@ -26,7 +26,7 @@
 
                     @foreach (var newsCategory in Model.NewsCategories)
                     {
-                        <a href="Category/CategoryDetails/@newsCategory.Id">@newsCategory.CategoryName</a>
+                        <a href="/Category/CategoryDetails/@newsCategory.Id">@newsCategory.CategoryName</a>
 
                     }
                 </div>
@@ -59,7 +59,7 @@
             if (TopNews.IndexOf(news) == 0)
             {
                 <div class="col-sm-6 news_left">
-                    <a href="newsdetails/@news.Id">
+                    <a href="/newsdetails/@news.Id">
                         <img src="~/Content/images/@news.Image" alt="">
                         <br><br>
                         <h3 style="font-family: 'Roboto Slab', serif">
@@ -84,7 +84,7 @@
             else
             {
                 <div class="col-sm-6 news_right">
-                    <a href="newsdetails/@news.Id">
+                    <a href="/newsdetails/@news.Id">
                         <img src="~/Content/images/@news.Image" alt="">
                         <br><br>
                         <h3 style="font-family: 'Roboto Slab', serif">

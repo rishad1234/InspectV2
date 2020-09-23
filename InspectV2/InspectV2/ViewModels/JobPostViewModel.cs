@@ -6,10 +6,9 @@ using System.Web;
 
 namespace InspectV2.ViewModels
 {
-    public class CategoryViewModel
+    public class JobPostViewModel
     {
-        public String CategoryName { get; set; }
+        public List<JobPost> JobPosts { get; set; }
         public List<News> News { get; set; }
-        public List<News> Sponsored { get; set; }
     }
 }

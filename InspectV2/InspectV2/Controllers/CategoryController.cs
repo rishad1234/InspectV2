@@ -31,11 +31,13 @@ namespace InspectV2.Controllers
         {
             var CategoryName = Context.NewsCategories.Find(id).CategoryName.ToString();
             var CategoryNews = Context.Database.SqlQuery<News>("Select * from News where(NewsCategory_Id = {0}) Order By Created_at DESC", id).ToList();
+            var Sponsored = Context.News.OrderByDescending(x => x.Created_at).ToList();
 
             var ViewModel = new CategoryViewModel
             {
                 CategoryName = CategoryName,
                 News = CategoryNews,
+                Sponsored = Sponsored,
 
             };
 

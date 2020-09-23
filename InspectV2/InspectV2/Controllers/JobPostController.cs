@@ -1,4 +1,5 @@
 ﻿using InspectV2.Models;
+using InspectV2.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,13 @@ namespace InspectV2.Controllers
         public ActionResult Index()
         {
             var jobPost = _context.Jobs.OrderByDescending(x => x.Created_at).ToList();
-            return View(jobPost);
+            var news = _context.News.OrderByDescending(x => x.Created_at).ToList();
+            var ViewModel = new JobPostViewModel
+            {
+                JobPosts = jobPost,
+                News = news,
+            };
+            return View(ViewModel);
         }
     }
 }
