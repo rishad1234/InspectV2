@@ -90,12 +90,12 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="scrollmenu">
-                        <a href='@Url.Action("Index", "Home")' class="btnCustom active">HOME</a>
-                        <a href='@Url.Action("Index", "About")' class="btnCustom">ABOUT</a>
-                        <a href='@Url.Action("Index", "Event")' class="btnCustom">EVENTS</a>
-                        <a href='@Url.Action("Index", "JobPost")' class="btnCustom">GET HIRED</a>
-                        <a href="@Url.Action("River", "Home")" class="btnCustom">RIVER</a>
-                        <a href='@Url.Action("Index", "Contact")' class="btnCustom">CONTACT</a>
+                        <a href='@Url.Action("Index", "Home")' id="Home" class="active">HOME</a>
+                        <a href='@Url.Action("Index", "About")' id="About" class="">ABOUT</a>
+                        <a href='@Url.Action("Index", "Event")' id="Event" class="">EVENTS</a>
+                        <a href='@Url.Action("Index", "JobPost")' id="JobPost" class="">GET HIRED</a>
+                        <a href="@Url.Action("River", "Home")" id="river" class="">RIVER</a>
+                        <a href='@Url.Action("Index", "Contact")' id="Contact"class="">CONTACT</a>
                     </div>
                 </div>
             </div>
@@ -116,6 +116,7 @@
     <!-- Optional JavaScript -->
     <script src="~/Content/js/particles.js"></script>
     <script src="~/Content/js/app.js"></script>
+    <script src="~/Content/js/handleMenu.js"></script>
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

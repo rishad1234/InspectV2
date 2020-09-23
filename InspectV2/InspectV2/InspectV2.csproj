@@ -321,6 +321,7 @@
     <Content Include="Content\js\app.js" />
     <Content Include="Content\js\controlModal.js" />
     <Content Include="Content\js\handle-signin-signup.js" />
+    <Content Include="Content\js\handleMenu.js" />
     <Content Include="Content\js\jquery.js" />
     <Content Include="Content\js\particles.js" />
     <Content Include="Content\js\three.r95.min.js" />
