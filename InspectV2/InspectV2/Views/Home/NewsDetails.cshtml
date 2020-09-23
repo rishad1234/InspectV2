@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     var SponsorCount = 0;
     var SimilarNews = 0;
+    var similarCount = 0;
 }
 
 <div class="container section_space news_Heading">
@@ -34,9 +35,21 @@
             </div>
 
             <div class="similar_news mt-4">
-                <h3 class="news_heading">
-                    Similar News
-                </h3>
+                @foreach(var news in Model.NewsList)
+                {
+                    if (news.NewsCategory.Id == Model.News.NewsCategory.Id && SimilarNews != 3 && news.Id != Model.News.Id)
+                    {
+                        similarCount++;
+                    }
+                }
+                @if(similarCount == 0)
+                {
+
+                }
+                else
+                {
+                    <h3 class="news_heading">Similar News</h3>
+                }
                 <br><br>
                 <div class="row">
                     @foreach (var news in Model.NewsList)

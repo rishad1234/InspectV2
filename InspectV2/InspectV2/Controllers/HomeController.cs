@@ -48,6 +48,7 @@ namespace InspectV2.Controllers
             return View(viewModel);
         }
 
+        [Authorize]
         [Route("river")]
         public ActionResult River()
         {
